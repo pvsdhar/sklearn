@@ -1,0 +1,8 @@
+from sklearn import datasets
+import numpy as np
+iris = datasets.load_iris()
+from sklearn.neighbors import KNeighborsClassifier
+knn = KNeighborsClassifier(n_neighbors = 6)
+knn.fit(iris.data,iris.target)
+knndata = np.array([[1.3,3.4,2.3,4.5],[2.3,0.4,1.2,1.7],[1,3,2,4],[2.3,4.5,0.2,1.2]])
+knn.predict(knndata)
